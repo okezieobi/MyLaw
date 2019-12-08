@@ -30,10 +30,10 @@
     "eject-client": "react-scripts eject",
     "dev": "nodemon --exec babel-node src/server/index.js",
     "release": "npm run clean && npm run build-app && npm run start",
-    "clean": "rm -rf api/dist && mkdir api/dist",
+    "clean": "rm -rf dist/server && mkdir dist/server",
     "build": "npm run clean && npm run build-app",
-    "build-app": "babel api/src -s -d api/dist --presets=@babel/env",
-    "start": "node api/dist/index.js"
+    "build-app": "babel src/server -s -d dist/server --presets=@babel/env",
+    "start": "node src/server/dist/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
