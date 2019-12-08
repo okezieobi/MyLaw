@@ -33,7 +33,7 @@
     "clean": "rm -rf dist && mkdir dist dist/server",
     "build": "npm run clean && npm run build-app",
     "build-app": "babel src/server -s -d dist/server --presets=@babel/env",
-    "start": "node src/server/dist/index.js",
+    "start": "node dist/server/index.js",
     "heroku-prebuild": "npm install --only=dev"
   },
   "eslintConfig": {
